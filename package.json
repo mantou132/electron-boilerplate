@@ -1,0 +1,59 @@
+{
+  "name": "electron-boilerplate",
+  "version": "0.0.1",
+  "description": "electron boilerplate",
+  "main": "./dist/index.js",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --ext .ts --fix src/",
+    "start": "electron ./dist",
+    "watch": "tsc --watch",
+    "build": "npm run lint && tsc && electron-builder ./dist"
+  },
+  "build": {
+    "appId": "com.example.electron-boilerplate",
+    "directories": {
+      "output": "build"
+    }
+  },
+  "keywords": [
+    "electron",
+    "boilerplate"
+  ],
+  "author": "mt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "electron": "^6.0.7",
+    "electron-builder": "^21.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.7.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantou132/electron-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mantou132/electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mantou132/electron-boilerplate#readme"
+}
