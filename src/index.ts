@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 
 app.on('ready', () => {
-  let window = new BrowserWindow({
+  let window: BrowserWindow | null = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
