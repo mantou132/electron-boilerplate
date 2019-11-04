@@ -12,7 +12,7 @@ app.on('ready', () => {
     closable: false, // 不能用常规方法退出，需要在 before-quite 中自行退出 app
     webPreferences: {
       nodeIntegration: true,
-      preload: `${process.env.NODE_ENV === 'production' ? process.cwd() : __dirname}/preload/index.js`,
+      preload: `${__dirname}/preload.js`,
     },
   });
 
@@ -20,11 +20,7 @@ app.on('ready', () => {
     window = null;
   });
 
-  /**
-   * UI 作为 web app 开发
-   * 需要使用 electron API 时可以用 BrowserWindow preload 插入适配代码
-   */
-  window.loadURL('https://xianqiao.wang');
+  window.loadURL(`file://${__dirname}/renderer.html`);
 });
 
 app.on('before-quit', () => {

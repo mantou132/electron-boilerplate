@@ -1,13 +1,13 @@
 ## Electron boilerplate
 
 - electron
-- main: typescript
-- window: reference url
+- typescript
+- webpack
 
 ## development
 
 ```bash
-# watch src
+# serve renderer/preload
 npm run watch
 # run electron app
 npm run start
