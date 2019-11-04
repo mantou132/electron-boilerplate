@@ -47,7 +47,9 @@
       "git add"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "@mantou/gem": "^0.1.11"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mantou132/electron-boilerplate.git"
