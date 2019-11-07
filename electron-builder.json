@@ -1,0 +1,10 @@
+{
+  "appId": "com.example.electron-boilerplate",
+  "directories": {
+    "output": "build"
+  },
+  "extraResources": {
+    "from": "./public",
+    "to": "./public"
+  }
+}

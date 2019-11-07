@@ -1,4 +1,6 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, Tray } from 'electron';
+
+let tray: Tray;
 
 app.on('ready', () => {
   let window: BrowserWindow | null = new BrowserWindow({
@@ -21,8 +23,14 @@ app.on('ready', () => {
   });
 
   window.loadURL(`file://${__dirname}/renderer.html`);
+
+  tray = new Tray(`${__public}/icon.png`);
+  tray.on('click', () => {
+    if (window) window.show();
+  });
 });
 
 app.on('before-quit', () => {
+  tray.destroy();
   app.exit();
 });
