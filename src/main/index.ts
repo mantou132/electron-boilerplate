@@ -24,7 +24,7 @@ app.on('ready', () => {
 
   window.loadURL(`file://${__dirname}/renderer.html`);
 
-  tray = new Tray(`${__public}/icon.png`);
+  tray = new Tray(`${__public}/iconTemplate@2x.png`);
   tray.on('click', () => {
     if (window) window.show();
   });
