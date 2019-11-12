@@ -1,7 +1,7 @@
-import * as path from 'path';
+import path from 'path';
 
-import * as webpack from 'webpack';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -21,10 +21,23 @@ const commonConfig: webpack.Configuration = {
         test: /\.(png|jpg|gif)$/,
         use: ['file-loader'],
       },
+      {
+        test: /\.node$/,
+        use: 'node-loader',
+      },
+      {
+        test: /\.node$/,
+        use: {
+          // 模块中的动态链接库带上，如果是 neon 构建的模块，则会有多份 dylib
+          // 在问题没有解决之前，可以考虑在打包时移除 dist/src 目录
+          loader: '@zeit/webpack-asset-relocator-loader',
+          options: {},
+        },
+      },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.node'],
   },
   output: {
     publicPath: './',

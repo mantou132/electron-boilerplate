@@ -9,6 +9,8 @@
     "sourceMap": true,
     "module": "commonjs",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
     "lib": ["es2018", "dom"],

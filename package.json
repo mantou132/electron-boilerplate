@@ -16,15 +16,15 @@
   ],
   "author": "mt",
   "license": "ISC",
-  "dependencies": {
-    "@mantou/gem": "^0.1.11"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@mantou/gem": "^0.1.11",
     "@types/html-webpack-plugin": "^3.2.1",
     "@types/node": "^12.12.6",
     "@types/webpack": "^4.39.8",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
+    "@zeit/webpack-asset-relocator-loader": "^0.6.2",
     "electron": "^6.1.4",
     "electron-builder": "^21.2.0",
     "eslint": "^6.6.0",
@@ -35,6 +35,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.7.0",
     "lint-staged": "^8.2.1",
+    "node-loader": "^0.6.0",
     "nodemon": "^1.19.4",
     "prettier": "^1.19.0",
     "ts-loader": "^6.2.1",
