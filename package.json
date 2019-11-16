@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "lint": "tsc --noEmit && eslint --ext .ts --fix src/",
-    "clean": "rm -rf ./dist",
-    "watch": "npm run clean && NODE_ENV=development webpack --watch",
+    "clean": "rimraf ./dist",
+    "watch": "npm run clean && cross-env NODE_ENV=development webpack --watch",
     "start": "nodemon --watch dist --exec 'electron ./dist --inspect'",
     "build": "npm run clean && npm run lint && webpack && electron-builder ./dist"
   },
@@ -25,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
     "@zeit/webpack-asset-relocator-loader": "^0.6.2",
+    "cross-env": "^6.0.3",
     "electron": "^6.1.4",
     "electron-builder": "^21.2.0",
     "eslint": "^6.6.0",
@@ -38,6 +39,7 @@
     "node-loader": "^0.6.0",
     "nodemon": "^1.19.4",
     "prettier": "^1.19.0",
+    "rimraf": "^3.0.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.4.1",
     "typescript": "^3.7.2",
