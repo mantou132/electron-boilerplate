@@ -16,9 +16,10 @@
   ],
   "author": "mt",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@mantou/gem": "^0.1.11"
+  },
   "devDependencies": {
-    "@mantou/gem": "^0.1.11",
     "@types/html-webpack-plugin": "^3.2.1",
     "@types/node": "^12.12.6",
     "@types/webpack": "^4.39.8",
