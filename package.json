@@ -8,7 +8,7 @@
     "clean": "rimraf ./dist",
     "watch": "npm run clean && cross-env NODE_ENV=development webpack --watch",
     "start": "nodemon --watch dist --exec 'electron ./dist --inspect'",
-    "build": "npm run clean && npm run lint && webpack && electron-builder ./dist"
+    "build": "npm run clean && npm run lint && cross-env NODE_ENV=production webpack && electron-builder ./dist"
   },
   "keywords": [
     "electron",
