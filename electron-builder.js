@@ -1,8 +1,0 @@
-module.exports = {
-  appId: 'com.example.electron-boilerplate',
-  files: ['dist/**/*', '!src', '!node_modules'],
-  directories: {
-    output: 'build',
-  },
-  extraResources: './public',
-};
