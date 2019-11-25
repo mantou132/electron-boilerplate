@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "tsc --noEmit && eslint --ext .ts --fix src/",
     "clean": "rimraf ./dist",
+    "install": "electron-rebuild",
     "watch": "npm run clean && cross-env NODE_ENV=development webpack --watch",
     "start": "nodemon --watch dist --exec 'electron ./dist --inspect'",
     "build": "npm run clean && npm run lint && cross-env NODE_ENV=production webpack && electron-builder ./dist"
@@ -28,6 +29,7 @@
     "cross-env": "^6.0.3",
     "electron": "^7.1.2",
     "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.8.8",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
