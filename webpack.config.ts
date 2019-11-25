@@ -26,16 +26,7 @@ const commonConfig: webpack.Configuration = {
       },
       {
         test: /\.node$/,
-        use: 'node-loader',
-      },
-      {
-        test: /\.node$/,
-        use: {
-          // 模块中的动态链接库带上，如果是 neon 构建的模块，则会有多份 dylib
-          // 在问题没有解决之前，可以考虑在打包时移除 dist/src 目录
-          loader: '@zeit/webpack-asset-relocator-loader',
-          options: {},
-        },
+        loader: 'native-ext-loader',
       },
     ],
   },
