@@ -13,8 +13,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "lib": ["es2018", "dom"],
-    "typeRoots": ["./node_modules/@types", "./src/types"]
+    "lib": ["es2018", "dom"]
   },
   "include": ["src"]
 }
