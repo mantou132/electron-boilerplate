@@ -8,7 +8,7 @@
 
 ```bash
 # serve renderer/preload
-npm run watch
+yarn run watch
 # run electron app
-npm run start
+yarn run start
 ```
