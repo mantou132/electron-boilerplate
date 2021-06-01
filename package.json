@@ -9,7 +9,8 @@
     "install": "electron-rebuild",
     "watch": "npm run clean && cross-env NODE_ENV=development webpack --watch",
     "start": "nodemon --watch dist --exec 'electron ./dist --inspect'",
-    "build": "npm run clean && npm run lint && cross-env NODE_ENV=production webpack && electron-builder ./dist"
+    "build": "npm run clean && npm run lint && cross-env NODE_ENV=production webpack && electron-builder ./dist",
+    "prepare": "husky install"
   },
   "keywords": [
     "electron",
@@ -47,11 +48,6 @@
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.ts": [
